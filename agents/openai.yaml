@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Wiki Reader"
+  short_description: "Co-read books into a structured knowledge base"
+  default_prompt: "Use $book-wiki-reader to read this book into my Book Wiki."
