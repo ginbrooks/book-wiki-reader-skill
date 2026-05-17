@@ -1,236 +1,236 @@
-# Book Wiki Reading Workflow
+# Book Wiki 共读流程
 
-This reference is the canonical workflow for the Book Wiki Reader skill.
+这是 Book Wiki Reader skill 的核心工作流。
 
-## Core Principles
+## 核心原则
 
-1. Decide purpose before deciding reading mode. Do not assume every book deserves deep reading.
-2. Inspect before co-reading. Show the reader the book introduction, table of contents, skeleton map, and reading advice first.
-3. Co-reading uses problem blocks or idea blocks, not chapter mechanics. Chapters are location tools.
-4. AI reads first; the reader assigns meaning. AI clarifies the book, the reader confirms what matters.
-5. Questions should trigger thought without creating burden. Ask one concrete question per unit.
-6. Keep author views, AI judgments, and user views separate.
-7. Only save what will be called again. The wiki is not a summary warehouse.
-8. Keep raw sources traceable and organized notes linked back to source.
+1. 先判断用途，再决定读法。不默认每本书都值得深读。
+2. 先检视，再共读。先给读者看书籍介绍、目录、骨架地图和阅读建议。
+3. 共读以问题块或观点块为单位，不被章节绑架。章节只是定位工具。
+4. AI 先读解，读者再赋义。AI 负责把书读清楚，读者负责确认什么对自己重要。
+5. 提问要触发思考，不制造负担。每个阅读单元只问一个具体问题。
+6. 作者观点、AI 判断、用户观点分开记录。
+7. 只保存未来会被调用的东西。Wiki 不是摘要仓库。
+8. raw 来源可追溯，整理后的 wiki 内容能回到来源。
 
-## Directory Roles
+## 目录分工
 
-- `raw/books/`: original book files, source records, converted text.
-- `raw/inbox/`: temporary excerpts, screenshots, links, transcripts, loose thoughts.
-- `wiki/books/`: single-book notes.
-- `wiki/themes/`: cross-book theme cards.
-- `wiki/ideas/`: ideas, projects, methods, and claims produced by reading.
-- `wiki/authors/`: important author cards.
-- `wiki/reading-plans/`: reading plans, book lists, and study routes.
+- `raw/books/`：书籍原文件、来源记录、转换后的文本。
+- `raw/inbox/`：临时摘录、截图、链接、转录文本、零散想法。
+- `wiki/books/`：单本书笔记。
+- `wiki/themes/`：跨书主题卡。
+- `wiki/ideas/`：阅读中产生的想法、项目、方法和判断。
+- `wiki/authors/`：重要作者卡。
+- `wiki/reading-plans/`：阅读计划、书单和学习路线。
 
-## 0. Intake
+## 0. 入库
 
-When the user provides a book or related material, preserve source first.
+用户提供书籍或相关材料后，先保存来源。
 
-Record:
+记录：
 
-- title, author, version or language
-- user-provided path or link
-- import date
-- original file or raw text location
+- 书名、作者、版本或语言
+- 用户提供的文件路径或链接
+- 导入日期
+- 原文件或原始文本位置
 
-Products:
+产物：
 
 - `raw/books/<book-slug>/source.md`
-- original or extracted text archived under `raw/books/<book-slug>/`
-- initialized `wiki/books/<book-slug>.md`
+- 原文件或转换文本归档到 `raw/books/<book-slug>/`
+- 初始化 `wiki/books/<book-slug>.md`
 
-## 1. Book Introduction
+## 1. 书籍介绍
 
-First help the user know what the book is, then ask whether and how they want to read it.
+先帮助用户知道“这本书是什么”，再问要不要读、怎么读。
 
-Output:
+输出：
 
-- basic information: title, author, version, publication or writing background
-- one-sentence intro
-- content intro in a few sentences, not chapter-level expansion
-- core question
-- who this book is for
-- what not to expect
-- possible value
+- 基本信息：书名、作者、版本、出版或写作背景
+- 一句话简介
+- 内容简介：几句话说明主要内容，不展开到章节级
+- 核心问题
+- 适合谁读
+- 不适合期待什么
+- 可能价值
 
-The introduction is a light entry point, not a full summary. It may include a content intro but does not replace inspectional reading.
+书籍介绍是轻量入口，不是完整总结。它可以包含内容简介，但不替代检视阅读。
 
-Classify the book backstage. Do not force the user to learn terms like practical book, theoretical book, philosophy book, and so on.
+后台判断书籍类型，前台不要强迫用户理解“实用书、理论书、哲学书”等术语。
 
-Product:
+产物：
 
-- update book note `Book Intro`
+- 更新 book note 的 `Book Intro`
 
-## 2. Purpose Check
+## 2. 用途确认
 
-After the book introduction, ask:
+书籍介绍后，问：
 
-> How do you want to use this book?
+> 你想怎么用这本书？
 
-Common options:
+常见选项：
 
-- help me understand it
-- help me find the important parts
-- read around my question
-- organize it into my library first
-- do not read this one
+- 帮我读懂
+- 帮我挑重点
+- 围绕我的问题读
+- 先整理进书库
+- 这本先不读
 
-If the user chooses not to read, archive or pass. Do not enter co-reading.
+如果用户选择不读，只归档或 pass，不进入共读。
 
-Product:
+产物：
 
-- update `Reading Intent`
+- 更新 `Reading Intent`
 
-## 3. Inspectional Reading
+## 3. 检视阅读
 
-If the user wants to continue, inspect the book. The goal is not full summary; it is to show structure and route.
+如果用户想继续读，再做检视阅读。目标不是完整总结，而是让用户看见结构和路线。
 
-Input priority:
+输入优先级：
 
-- title and subtitle
-- table of contents
-- preface, introduction, foreword
-- conclusion, afterword
-- beginnings and endings of key chapters
-- quick full-book scan if needed
+- 标题和副标题
+- 目录
+- 前言、序言、引言
+- 结论、后记
+- 关键章节的开头和结尾
+- 必要时快速翻看全书
 
-Output:
+输出：
 
-- original table of contents for location and source tracing
-- skeleton map with fewer levels showing the main line, part relationships, and progression
-- core question
-- chapter value: trunk, case, background, supplement, or skippable
-- reading advice
+- 原始目录：用于定位和溯源
+- 骨架地图：用更少层级说明主线、部分关系和推进方式
+- 核心问题
+- 章节价值：主干、案例、背景、补充、可跳读
+- 阅读建议
 
-Skeleton map is the understanding view. Original TOC is the location view. The skeleton can start light and be corrected during co-reading.
+骨架地图是理解主视图，原始目录是定位视图。骨架可以先做轻量版本，后续共读中持续修正。
 
-Product:
+产物：
 
-- update `Reading Map`
+- 更新 `Reading Map`
 
-## 4. Confirm Reading Path
+## 4. 确认读法
 
-After introduction and inspection, confirm the route.
+用户看完书籍介绍和检视结果后，再确认读法。
 
-Reader-facing options:
+前台选项：
 
-- read with me from start to finish
-- help me pick the key parts
-- read around my question
-- organize it into my library first
-- do not read this one
+- 带我从头读
+- 帮我挑重点
+- 围绕我的问题读
+- 先整理进书库
+- 这本先不读
 
-Backstage mapping:
+后台映射：
 
-- start to finish: co-reading / analytical reading
-- key parts: selected close reading
-- around my question: question-oriented or syntopical reading
-- library first: reference reading / archive
-- do not read: discard or temporary archive
+- 带我从头读：逐步共读 / 分析阅读
+- 帮我挑重点：选段精读
+- 围绕我的问题读：问题导向读 / 主题阅读
+- 先整理进书库：资料读 / 归档
+- 这本先不读：淘汰读 / 暂存
 
-For deep, question-oriented, or long-term asset reading, ask:
+如果用户选择深读、问题导向读或长期资产化，再问：
 
-- What question do you most want this book to answer?
-- What do you want to keep at the end: notes, process, theme card, idea card, or judgment?
+- 你最想让这本书回答什么问题？
+- 你希望最后留下什么？笔记、流程、主题卡、想法卡，还是判断？
 
-Product:
+产物：
 
-- update `Reading Plan`
+- 更新 `Reading Plan`
 
-## 5. Co-Reading
+## 5. 正式共读
 
-The goal is not chapter summaries. The goal is to help the user understand structure, judge claims, and form ideas. The reading unit can be a problem block, idea block, argument, method, or chapter section.
+共读目标不是章节摘要，而是帮助用户理解结构、判断观点，并形成自己的想法。阅读单元可以是问题块、观点块、论证、方法或章节片段。
 
-Each unit:
+每个阅读单元：
 
-1. State where this unit sits in the book skeleton, or what problem it is handling.
-2. Answer the three-question reading card.
-3. Ask the fourth question to the reader.
-4. Wait for user response. If the user explicitly skips discussion, record skipped.
-5. Record user view, then add AI judgment or shared conclusion.
-6. Write to wiki before marking the unit complete.
+1. 说明它在全书骨架中的位置，或它正在处理的问题。
+2. 回答三问读解卡。
+3. 把第四问抛给读者。
+4. 等用户回应。如果用户明确跳过讨论，记录为 skipped。
+5. 记录用户观点，再补充 AI 判断或共同结论。
+6. 写入 wiki 后，这个单元才算完成。
 
-Three-question reading card:
+三问读解卡：
 
-- What problem is it solving?
-- What answer does the author give?
-- Why does that answer hold? What argument and examples support it?
+- 它在解决什么问题？
+- 作者给出的答案是什么？
+- 这个答案凭什么成立？有哪些论证和例子？
 
-Fourth question for the reader:
+第四问抛给读者：
 
-- What might this have to do with you?
+- 这可能和你有什么关系？
 
-AI may offer possible connections, but cannot decide meaning for the reader.
+AI 可以提供可能连接，但不能替读者决定意义。
 
-### Question Rules
+### 提问规则
 
-- Ask one main question per unit, with at most one follow-up when useful.
-- Do not ask vague "what do you think" questions.
-- Serve the reading goal: understand, judge, apply, or route to the wiki.
-- If the user gives a short answer, follow their answer. If they do not want to discuss, record skipped and continue.
-- AI may offer 2-3 possible directions to help the user start, but the user chooses, revises, or rejects.
+- 每个阅读单元只问一个主问题，必要时最多追问一次。
+- 不问空泛的“你怎么看”。
+- 问题服务阅读目标：读懂、判断、应用或入库。
+- 如果用户回答很短，顺着他的回答追问；如果用户不想讨论，记录 skipped 并继续。
+- AI 可以给 2-3 个可能方向帮助启动，但用户负责选择、修正或否定。
 
-### Question Routing
+### 提问路由
 
-- Concept or definition: ask comprehension.
-- Author claim: ask judgment.
-- Argument: ask evidence.
-- Method or steps: ask application.
-- Case or story: ask what it proves.
-- Long-term reusable idea: ask asset routing.
+- 概念或定义：问理解问题。
+- 作者主张：问判断问题。
+- 论证过程：问证据问题。
+- 方法或步骤：问应用问题。
+- 案例或故事：问它证明了什么。
+- 长期可复用观点：问入库问题。
 
-Useful prompts:
+可用问法：
 
-- Structure: If this unit were removed, what would the book lose?
-- Understanding: How would you say this in your own words?
-- Evidence: What does the author's example actually prove?
-- Judgment: Where does this claim hold, and where might it fail?
-- Transfer: Where could this change your work, learning, writing, or project?
-- Routing: Should this stay in the book note, or become a theme, idea, method, or plan?
+- 结构：如果拿掉这一块，全书会少掉什么？
+- 理解：如果用你自己的话讲一遍，你会怎么说？
+- 证据：作者的例子到底证明了哪一步？
+- 判断：这个观点在哪些条件下成立，在哪些条件下可能失效？
+- 迁移：它可能改变你的工作、学习、写作或项目里的哪一步？
+- 入库：它应该留在本书笔记里，还是变成主题、想法、方法或计划？
 
-Do not summarize and declare done. Without user response or explicit skip, the unit is not complete.
+不能只总结完就宣布结束。没有用户回应或明确跳过时，这个阅读单元不得标记为完成。
 
-## 6. Summary and Routing
+## 6. 总结与入库
 
-After a stage or whole book, first close understanding, then route assets. Do not leave all summarization to the user; do not let AI decide personal meaning alone.
+读完一个阶段或一本书后，先收束理解，再分流资产。不要把总结全部丢给用户，也不要由 AI 单方面决定个人意义。
 
-Division of labor:
+分工：
 
-- AI organizes, compresses, and routes: author views, structure, arguments, reusable concepts, methods, excerpts, asset suggestions.
-- Reader confirms meaning: real takeaway, agreement or doubt, personal connection, reread value, future reuse.
+- AI 负责整理、压缩、分流：作者观点、结构、论证、可复用概念、方法、摘录、入库建议。
+- 读者负责确认意义：真正收获、同意或怀疑、个人连接、是否值得重读、未来是否复用。
 
-Process:
+流程：
 
-1. AI gives a summary and routing draft.
-2. Reader confirms, changes, removes, or adds.
-3. AI writes the confirmed result into wiki.
-4. Save only future-callable material.
+1. AI 给出总结入库草案。
+2. 读者确认、修改、删除或补充。
+3. AI 把确认结果写入 wiki。
+4. 只保存未来会被调用的内容。
 
-Summary and routing draft:
+总结入库草案：
 
-- core question of the book or stage
-- author's core answer
-- 3-5 most important author views
-- suggested book note entries
-- suggested theme cards, idea cards, method cards, or reading plans
-- possible excerpts
-- 2-3 questions for reader confirmation
+- 这本书或这一阶段的核心问题
+- 作者的核心答案
+- 作者最重要的 3-5 个观点
+- 建议写入 book note 的内容
+- 建议新建或更新的 theme card、idea card、method card、reading plan
+- 可能值得保留的摘录
+- 2-3 个读者确认问题
 
-Default confirmation questions:
+默认确认问题：
 
-- Which item is closest to your real takeaway?
-- Which item do you disagree with, want to delete, or want rewritten?
-- Is there a question you want to keep pursuing?
+- 哪一条最像你真正的收获？
+- 哪一条你不同意、想删掉或想改写？
+- 有没有一个你想以后继续追的问题？
 
-## Minimal Start
+## 最小启动方式
 
-When the user says "read this book with Book Wiki" or similar:
+当用户说“按 Book Wiki 读这本书”或类似表达时：
 
-1. read this workflow
-2. ingest the material
-3. give a book introduction
-4. ask how the user wants to use the book
-5. if they continue, inspect and output TOC, skeleton map, core question, chapter value, reading advice
-6. confirm the reading path
-7. co-read, discuss, record, and route assets
+1. 读取本 workflow
+2. 导入材料
+3. 输出书籍介绍
+4. 询问用户想怎么使用这本书
+5. 如果继续读，做检视阅读，输出目录、骨架地图、核心问题、章节价值和阅读建议
+6. 确认读法
+7. 开始共读、讨论、记录和入库分流

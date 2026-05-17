@@ -1,64 +1,64 @@
 # Book Wiki Reader Skill
 
-Book Wiki Reader is a Codex skill for reading books into a structured personal knowledge base.
+Book Wiki Reader 是一个 Codex skill，用来把“读一本书”变成结构化的个人知识库。
 
-It helps an AI assistant:
+它可以帮助 AI 助手：
 
-- import a book into a Book Wiki folder
-- create raw source records and structured book notes
-- introduce the book before reading
-- inspect the book and build a reading map
-- co-read by problem blocks or idea blocks
-- use a three-question reading card to understand the text
-- ask the reader to decide personal meaning
-- route durable material into book notes, theme cards, idea cards, author cards, and reading plans
+- 把一本书导入 Book Wiki 文件夹
+- 自动创建 raw 来源记录和结构化 book note
+- 在正式阅读前先介绍这本书
+- 做检视阅读，生成阅读地图
+- 按问题块或观点块共读，而不是机械按章节摘要
+- 用“三问读解卡”帮助读者读懂文本
+- 把“这和我有什么关系”交给读者判断
+- 把真正有长期价值的内容分流到 book note、theme card、idea card、author card 和 reading plan
 
-The goal is not to generate pretty summaries. The goal is to help readers build durable understanding, judgment, and a reusable reading memory.
+这个 skill 的目标不是生成漂亮摘要，而是帮助读者形成可以长期调用的理解、判断、主题和想法。
 
-## Install
+## 安装
 
-Clone or download this repository into your Codex skills directory:
+把这个仓库克隆或下载到你的 Codex skills 目录：
 
 ```bash
 mkdir -p ~/.codex/skills
 git clone https://github.com/wjc2336098412-star/book-wiki-reader-skill.git ~/.codex/skills/book-wiki-reader
 ```
 
-If you downloaded a zip file, unzip it and place the folder here:
+如果你下载的是 zip 文件，解压后把文件夹放到：
 
 ```text
 ~/.codex/skills/book-wiki-reader
 ```
 
-Then restart Codex or start a new session so the skill can be discovered.
+然后重启 Codex，或者开启一个新会话，让 Codex 重新发现这个 skill。
 
-## Usage
+## 使用方式
 
-Say something like:
+你可以这样说：
 
 ```text
-Use $book-wiki-reader to read this book into my Book Wiki.
+用 $book-wiki-reader 把这本书读进我的 Book Wiki。
 ```
 
-Or:
+或者更口语一点：
 
 ```text
 按 Book Wiki 读这本书。
 ```
 
-If you provide a local book file, the skill can initialize the wiki entry with:
+如果你提供的是本地书籍文件，可以用脚本初始化 wiki 条目：
 
 ```bash
 python3 ~/.codex/skills/book-wiki-reader/scripts/init_book_wiki.py \
   --root ~/Documents/Book-Wiki \
   --source "/path/to/book.txt" \
-  --title "Book Title" \
-  --author "Author Name"
+  --title "书名" \
+  --author "作者"
 ```
 
-## Default Wiki Structure
+## 默认 Wiki 结构
 
-The skill uses this structure:
+这个 skill 默认使用下面的结构：
 
 ```text
 Book-Wiki/
@@ -74,32 +74,32 @@ Book-Wiki/
   templates/
 ```
 
-## Reading Flow
+## 阅读流程
 
-1. Intake and archive the source.
-2. Give a book introduction.
-3. Ask how the reader wants to use the book.
-4. Inspect the book and create a reading map.
-5. Confirm the reading path.
-6. Co-read by problem blocks or idea blocks.
-7. Ask one useful question per unit.
-8. Summarize and route only future-useful material into the wiki.
+1. 入库并保存原始来源。
+2. 先输出书籍介绍。
+3. 询问读者想怎么使用这本书。
+4. 做检视阅读，生成阅读地图。
+5. 确认读法。
+6. 按问题块或观点块共读。
+7. 每个阅读单元只问一个真正有用的问题。
+8. 最后只把未来还会被调用的内容沉淀进 wiki。
 
-## Co-Reading Card
+## 三问读解卡
 
-The AI answers:
+AI 负责回答：
 
-1. What problem is this unit solving?
-2. What answer does the author give?
-3. Why does that answer hold? What argument and examples support it?
+1. 这个阅读单元在解决什么问题？
+2. 作者给出的答案是什么？
+3. 这个答案凭什么成立？有哪些论证和例子？
 
-The reader answers:
+读者负责回答：
 
-4. What might this have to do with you?
+4. 这可能和我有什么关系？
 
-## Notes
+## 原则
 
-- Keep author views, AI judgments, and reader views separate.
-- Save only material likely to be reused.
-- Preserve raw sources for traceability.
-- Summarize and analyze books; do not reproduce long copyrighted passages.
+- 作者观点、AI 判断、读者观点要分开。
+- 只保存未来可能复用的内容。
+- 保留 raw 来源，方便追溯。
+- 对书籍做总结和分析，不复制大段受版权保护的原文。

@@ -1,26 +1,26 @@
 # {{plan}}
 
-## Goal
+## 目标
 
-What question does this reading path solve?
+这条阅读路线想解决什么问题？
 
-## Time Range
+## 时间范围
 
-- Start:
-- End:
+- 开始：
+- 结束：
 
-## Book List
+## 书单
 
-| Status | Book | Author | Why |
+| 状态 | 书 | 作者 | 为什么读 |
 | --- | --- | --- | --- |
-| unread |  |  |  |
+| 未读 |  |  |  |
 
-## Questions To Track
+## 追踪问题
 
 1.
 2.
 3.
 
-## Review
+## 复盘
 
-Which books were worth rereading? Which ideas changed the user's understanding?
+哪些书值得重读？哪些观点真正改变了用户的理解？

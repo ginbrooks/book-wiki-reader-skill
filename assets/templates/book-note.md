@@ -1,96 +1,96 @@
 # {{title}}
 
-## Metadata
+## 元数据
 
-- Author: {{author}}
-- Year:
-- Category:
-- Status: unread / reading / finished / abandoned
-- Source: {{source}}
-- Raw archive: {{raw_archive}}
-- Started: {{date}}
-- Finished:
+- 作者：{{author}}
+- 年份：
+- 类型：
+- 状态：未读 / 阅读中 / 已读完 / 已放弃
+- 来源：{{source}}
+- Raw 归档：{{raw_archive}}
+- 开始日期：{{date}}
+- 完成日期：
 
-## Book Intro
+## 书籍介绍
 
-- One-liner:
-- Content intro:
-- Core question:
-- Who it is for:
-- What not to expect:
-- Possible value:
+- 一句话简介：
+- 内容简介：
+- 核心问题：
+- 适合谁读：
+- 不适合期待什么：
+- 可能价值：
 
-## Reading Intent
+## 阅读意图
 
-- How I want to use this book:
-- Question I want answered:
-- Expected output:
+- 我想怎么使用这本书：
+- 我希望它回答的问题：
+- 我希望最后留下什么：
 
-## Reading Map
+## 阅读地图
 
-- Original TOC:
-- Skeleton map:
-- Core question:
-- Author's likely answer:
-- Key units worth close reading:
-- Units that can be skimmed:
-- Reading advice:
+- 原始目录：
+- 骨架地图：
+- 核心问题：
+- 作者可能的答案：
+- 值得精读的单元：
+- 可以跳读的单元：
+- 阅读建议：
 
-## Co-Reading Notes
+## 共读记录
 
-### Unit Template
+### 单元模板
 
-- Unit:
-- Location:
-- Problem:
-- Author answer:
-- Argument and examples:
-- Reader question:
-- User discussion:
-- AI / shared conclusion:
-- Asset routing:
+- 单元：
+- 位置：
+- 它在解决什么问题：
+- 作者的答案：
+- 论证和例子：
+- 抛给读者的问题：
+- 用户讨论：
+- AI / 共同结论：
+- 入库分流：
 
-## Core Ideas
+## 核心观点
 
 1.
 2.
 3.
 
-## Useful Excerpts
+## 有用摘录
 
-> Keep excerpts short. Attach chapter, page, or location when possible.
+> 摘录要短。尽量附章节、页码或位置。
 
-## My Notes
+## 我的笔记
 
-My understanding, disagreement, questions, examples, and possible transfers.
+自己的理解、不同意的地方、疑问、例子和迁移想法。
 
-## Argument Map
+## 论证地图
 
-- Main claims:
-- Evidence:
-- Reasoning:
-- Weak points:
-- Concepts:
+- 主要主张：
+- 证据：
+- 推理：
+- 薄弱点：
+- 概念：
 
-## Asset Routing
+## 入库分流
 
-- Book note:
-- Theme cards:
-- Idea cards:
-- Author card:
-- Reading plan:
-- Archived note:
+- Book note：
+- Theme cards：
+- Idea cards：
+- Author card：
+- Reading plan：
+- Archived note：
 
-## Final Review
+## 最终复盘
 
-- Core contribution:
-- What changed my thinking:
-- What I doubt:
-- What I want to keep using:
-- Reread:
+- 核心贡献：
+- 改变了我的什么理解：
+- 我怀疑什么：
+- 我还想继续使用什么：
+- 是否值得重读：
 
-## Related
+## 关联
 
-- Author:
-- Themes:
-- Related books:
+- 作者：
+- 主题：
+- 相关书：

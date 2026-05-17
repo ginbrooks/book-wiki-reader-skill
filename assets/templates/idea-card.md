@@ -1,36 +1,36 @@
 # {{idea}}
 
-## Source
+## 来源
 
-- Book:
-- Raw note:
-- Date:
+- 书：
+- Raw note：
+- 日期：
 
-## One-Liner
+## 一句话
 
-What is this idea?
+这个想法是什么？
 
-## Trigger
+## 触发点
 
-Which reading unit, question, excerpt, or discussion triggered it?
+是哪一个阅读单元、问题、摘录或讨论触发了它？
 
-## Thought
+## 想法展开
 
-Develop the user's judgment, claim, project idea, method, or research question.
+展开用户自己的判断、主张、项目想法、方法或研究问题。
 
-## Why It Matters
+## 为什么值得保留
 
-Why preserve this? What does it solve or open?
+它解决了什么问题，或者打开了什么新问题？
 
-## Possible Forms
+## 可能形态
 
-- Article / video:
-- Project:
-- Personal method:
-- Research question:
+- 文章 / 视频：
+- 项目：
+- 个人方法：
+- 研究问题：
 
-## Related
+## 关联
 
-- Books:
-- Themes:
-- Authors:
+- 书：
+- 主题：
+- 作者：

@@ -1,25 +1,25 @@
 # {{theme}}
 
-## Question
+## 核心问题
 
-What core question does this theme track?
+这个主题追踪的核心问题是什么？
 
-## Short Answer
+## 阶段性回答
 
-Current working answer.
+我目前对这个问题的理解。
 
-## Notes Across Books
+## 跨书笔记
 
-- Book:
-  - Author view:
-  - My take:
+- 书：
+  - 作者观点：
+  - 我的判断：
 
-## Tensions
+## 张力
 
-Disagreements, contradictions, or complements across books and authors.
+不同书、作者或观点之间的分歧、矛盾或互补关系。
 
-## Related
+## 关联
 
-- Books:
-- Authors:
-- Other themes:
+- 书：
+- 作者：
+- 其他主题：

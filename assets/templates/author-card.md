@@ -1,25 +1,25 @@
 # {{author}}
 
-## Snapshot
+## 快照
 
-- Field:
-- Era:
-- Representative works:
+- 领域：
+- 时代：
+- 代表作品：
 
-## Core Concerns
+## 核心关切
 
-What questions does this author keep returning to?
+这个作者长期关心什么问题？
 
-## Main Ideas
+## 主要观点
 
 1.
 2.
 3.
 
-## Books
+## 相关书籍
 
 -
 
-## Notes
+## 我的判断
 
-User judgments, preferences, reservations, and cross-book observations.
+用户对这个作者的判断、偏好、保留意见和跨书观察。
