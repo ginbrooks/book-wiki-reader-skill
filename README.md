@@ -21,7 +21,7 @@ Book Wiki Reader 是一个 Codex skill，用来把“读一本书”变成结构
 
 ```bash
 mkdir -p ~/.codex/skills
-git clone https://github.com/wjc2336098412-star/book-wiki-reader-skill.git ~/.codex/skills/book-wiki-reader
+git clone https://github.com/ginbrooks/book-wiki-reader-skill.git ~/.codex/skills/book-wiki-reader
 ```
 
 如果你下载的是 zip 文件，解压后把文件夹放到：
