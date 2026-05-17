@@ -29,15 +29,16 @@ description: 当用户想和 AI 共读一本书、建立或维护 Book Wiki、�
 当用户提供一本书，或要求开始共读时：
 
 1. 读取 `references/reading-workflow.md`。
-2. 如果用户提供了本地文件，运行 `scripts/init_book_wiki.py`，创建 raw 归档和 book note。
+2. 如果用户提供了本地文件，运行 `scripts/init_book_wiki.py`，创建 raw 归档、分块索引、context stack 目录和 book note。
 3. 如果文件不能直接读取，先用合适的本地能力提取可读文本，再同时归档原文件和转换文本。
-4. 先给书籍介绍，不要一上来做完整总结。
-5. 询问用户想怎么使用这本书。
-6. 如果用户想继续读，做检视阅读并生成阅读地图。
-7. 确认读法。
-8. 按问题块或观点块共读，不机械按章节推进。
-9. 每个有意义的阅读单元后，分开记录作者观点、AI 判断和用户观点。
-10. 阶段结束或全书读完后，先给总结入库草案，再让用户确认保留什么。
+4. 不要把整本书一次性读入上下文。优先读取 `source.md`、`chunk-index.md`、目录、前言、结论和相关分块。
+5. 先给书籍介绍，不要一上来做完整总结。
+6. 询问用户想怎么使用这本书。
+7. 如果用户想继续读，做检视阅读并生成阅读地图。
+8. 确认读法。
+9. 按问题块或观点块共读，不机械按章节推进。
+10. 每个有意义的阅读单元后，分开记录作者观点、AI 判断和用户观点。
+11. 阶段结束或全书读完后，先给总结入库草案，再让用户确认保留什么。
 
 ## 初始化脚本
 
@@ -57,7 +58,20 @@ python3 /Users/shu/.codex/skills/book-wiki-reader/scripts/init_book_wiki.py \
 
 - `raw/books/<book-slug>/original/<source-file>`
 - `raw/books/<book-slug>/source.md`
+- `raw/books/<book-slug>/chunk-index.md`
+- `raw/books/<book-slug>/chunks/chunk-0001.md`
+- `raw/books/<book-slug>/stack/`
 - `wiki/books/<book-slug>.md`
+
+默认会把 txt/md 纯文本切成约 8000 字符的分块，避免长书撑爆上下文。PDF、EPUB、DOCX 等文件应先转换出可读文本，再导入转换后的文本。
+
+长书读取规则，也就是 context stacking：
+
+- 先看 `chunk-index.md`，不要直接读完整 `source.md` 或整本原文。
+- 把原文、分块摘要、阅读单元摘要、章节/部分摘要、全书骨架分层保存。
+- 书籍介绍和检视阅读只抽样读取关键分块：开头、目录附近、前言、结论、章节首尾。
+- 正式共读时优先带入高层上下文，只在需要证据、例子、定义或短摘录时读取 1-3 个原文分块。
+- 读完一个单元后先压缩进 `stack/` 和 wiki，再继续下一个单元，减少对对话历史的依赖。
 
 ## 共读分工
 

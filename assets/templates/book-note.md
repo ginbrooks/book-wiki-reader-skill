@@ -8,6 +8,8 @@
 - 状态：未读 / 阅读中 / 已读完 / 已放弃
 - 来源：{{source}}
 - Raw 归档：{{raw_archive}}
+- 分块索引：{{chunk_index}}
+- Context Stack：{{context_stack}}
 - 开始日期：{{date}}
 - 完成日期：
 
