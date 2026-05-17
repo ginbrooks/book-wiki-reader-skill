@@ -165,6 +165,12 @@ def create_stack_files(raw_dir: Path, title: str) -> None:
         "book-skeleton.md": [
             f"# Book Skeleton: {title}",
             "",
+            "## 骨架状态",
+            "",
+            "- 类型：初版骨架 / 校准骨架 / 修订骨架",
+            "- 生成依据：快速检视 / 全书索引 / 共读修订",
+            "- 可信度说明：",
+            "",
             "## 全书核心问题",
             "",
             "## 作者主线",
