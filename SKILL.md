@@ -44,7 +44,7 @@ When the user gives a book file or asks to start reading:
 For local files, prefer the deterministic script:
 
 ```bash
-python /Users/shu/.codex/skills/book-wiki-reader/scripts/init_book_wiki.py \
+python3 /Users/shu/.codex/skills/book-wiki-reader/scripts/init_book_wiki.py \
   --root /Users/shu/Documents/Book-Wiki \
   --source "/path/to/book.txt" \
   --title "Book Title" \

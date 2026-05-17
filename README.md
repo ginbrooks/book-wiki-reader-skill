@@ -21,7 +21,7 @@ Clone or download this repository into your Codex skills directory:
 
 ```bash
 mkdir -p ~/.codex/skills
-git clone https://github.com/YOUR_NAME/book-wiki-reader-skill.git ~/.codex/skills/book-wiki-reader
+git clone https://github.com/wjc2336098412-star/book-wiki-reader-skill.git ~/.codex/skills/book-wiki-reader
 ```
 
 If you downloaded a zip file, unzip it and place the folder here:
