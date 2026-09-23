@@ -11,7 +11,7 @@ description: 当用户想和 AI 共读一本书、建立或维护 Book Wiki、�
 
 除非用户指定其他位置，默认使用：
 
-`/Users/shu/Documents/Book-Wiki`
+`~/Documents/Book-Wiki`
 
 如果这个目录不存在，创建标准结构：
 
@@ -62,8 +62,8 @@ description: 当用户想和 AI 共读一本书、建立或维护 Book Wiki、�
 处理本地书籍文件时，优先使用确定性的初始化脚本：
 
 ```bash
-python3 /Users/shu/.codex/skills/book-wiki-reader/scripts/init_book_wiki.py \
-  --root /Users/shu/Documents/Book-Wiki \
+python3 ~/.codex/skills/book-wiki-reader/scripts/init_book_wiki.py \
+  --root ~/Documents/Book-Wiki \
   --source "/path/to/book.txt" \
   --title "书名" \
   --author "作者"

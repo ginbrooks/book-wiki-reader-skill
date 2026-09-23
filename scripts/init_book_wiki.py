@@ -6,7 +6,7 @@ import shutil
 from pathlib import Path
 
 
-DEFAULT_ROOT = Path("/Users/shu/Documents/Book-Wiki")
+DEFAULT_ROOT = Path.home() / "Documents" / "Book-Wiki"
 DEFAULT_CHUNK_SIZE = 8000
 TEXT_EXTENSIONS = {".txt", ".md", ".markdown", ".text"}
 
