@@ -1,5 +1,13 @@
 # 初始化示例
 
+## 可交互的阅读工作台
+
+[在线演示](https://ginbrooks.github.io/demos/book/)只使用本目录下的 `reading-note.md`、`small-experiment.md` 和 `demo-notes/`。两篇文章为原创虚构情景，笔记与主题卡为人工编写的演示材料，不包含真实用户观点或模型生成结果。
+
+运行 `python3 scripts/build_reader.py --demo --output reader.html` 即可生成相同的离线页面。`docs/demo/index.html` 是提交到仓库的可复现构建，`docs/demo/screenshot.png` 是实际界面截图。生成器不会读取默认个人 Book Wiki 路径。
+
+## 导入器示例
+
 `reading-note.md` 是为本仓库编写的短文，文中人物和行为均为假设。示例不需要 API key，也不会调用模型。
 
 在仓库根目录执行 README 中的示例命令，脚本会归档这篇短文，按 300 字符目标切分，并创建以下内容：

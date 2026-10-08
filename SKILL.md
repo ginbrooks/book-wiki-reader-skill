@@ -80,6 +80,15 @@ python3 ~/.codex/skills/book-wiki-reader/scripts/init_book_wiki.py \
 - `raw/books/<book-slug>/stack/`
 - `wiki/books/<book-slug>.md`
 
+如果用户希望浏览已有书库，可生成只读的离线工作台：
+
+```bash
+python3 ~/.codex/skills/book-wiki-reader/scripts/build_reader.py \
+  --root ~/Documents/Book-Wiki --output ./book-reader.html
+```
+
+网页支持关键词检索、原文高亮、分块阅读和来源跳转。它不会调用模型或改写 Markdown；更新笔记后需要重新生成。写入笔记时，用 Wiki 根目录相对路径记录依据，例如 `[原文](raw/books/<slug>/chunks/chunk-0002.md)`，便于工作台建立可核对的跳转。网页包含导出的原文与笔记，生成本地页面不代表用户授权公开这些材料。
+
 默认会把 txt/md 纯文本切成约 8000 字符的分块，避免长书撑爆上下文。PDF、EPUB、DOCX 等文件应先转换出可读文本，再导入转换后的文本。
 
 长书读取规则，也就是 context stacking：
